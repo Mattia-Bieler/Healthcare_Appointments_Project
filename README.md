@@ -9,6 +9,16 @@ For the next step, I needed to import the datetime module to change the data typ
 
 To enhance the analysis and gain more concrete insight, I incorporated four percentage calculations. These are ‘daily utilisation’, ‘attended appointments per month’, ‘attended GP appointments per month’ and ‘appointments per service setting’. While writing the code for the project, I ensured a logical process was followed that abided by PEP8 guidelines (see appendix for examples). For example, for attended GP appointments, the code is separated into the five individual sections, each with clear comments on what the following code does. Furthermore, the variables used (‘gp_attended’, ‘count_by_month’, ‘total_count_by_month’ and ‘percentage_by _month’) explain the codes functionality on their own. This increases the value of the variables, as it can be reuse with a clear understanding of its purpose.
 
+| Description | Python Code |
+| -------- | -------- |
+| __Code used to calculate the number of GP appointments per month.__ | ![GP App per Month](https://github.com/Mattia-Bieler/LSE_Data_Analytics_Career_Accelerator/assets/132078605/0850eb03-c4a4-4df8-bb5d-a6c382699e57) |
+| __Lineplot code example.__ | ![Lineplot Example](https://github.com/Mattia-Bieler/LSE_Data_Analytics_Career_Accelerator/assets/132078605/689a98ad-9ead-46ce-86fa-b3322c400430) |
+| __Tableau__ |  Data manipulation, visualising complex relationships, interactive visualisations, designing dashboards, testing and optimising dashboards, and dashboard accessibility. |
+| __Relational Database Management__  | Foundations of database design, conceptual and logical design, and creating entity-relationship diagrams. |
+| __SQL__ | Foundations of SQL, creating databases, retrieving data, writing queries, updating databases, and data cleaning with SQL. |
+| __Analysing Data with SQL__| Working with multiple tables, executing joins, querying multiple tables, and increasing retrieval speed using indexing. |
+| __Data Ethics__ | Working with sensitive data and GDPR. |
+
 ## Visualisations and Insight
 The main logic behind the decision to use barplots and lineplots was that they are easily recognisable graph types that are simple to understand, and both graph types are excellent for comparing various categories. Furthermore, lineplots have the added aspect of comparing these categories over a period. For the coding aspect of the visualisations, I aimed to keep the structure the same. After creating a graph, I improved the visual aspect of the visualisation with appropriate labels, as well as adding a grid, specifying a colour palette, and customising the legend when necessary. Additionally, the axes tick labels were customised, and data points were added when appropriate. As the lineplot code example in the appendix illustrates, the date format was changed to %d %b (e.g., Aug 21), making the visualisation clearer. The barplot code example in the appendix shows that a ‘for loop’ was used to display bar values on the graph. Furthermore, the barplot for words related to healthcare also has an upper and lower threshold to remove overrepresented words and present the top fifteen hashtags.
 
