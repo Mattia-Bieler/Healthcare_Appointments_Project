@@ -21,6 +21,10 @@ Insights drawn from looking at the calculated percentages shows that for the bus
 
 Regarding attended appointments, between 90-93% of appointments were attended each month with the percentage going up to 93-95% for attended GP appointments. As the data highlights, the percentage of missed GP appointments is lower than the total percentage of missed appointments. This suggests that to address the concerns of the stakeholders over the cost of missed GP appointments, a further investigation needs to be carried out into why a small fraction of missed GP appointments is having a significant economic impact. One reason, which would need further analysis to confirm, could be because GP has the highest number of appointments per month (expert for October 2021) for healthcare professional type, meaning missed GP appointments would presumably account for a significant portion of the 7-10% of missed appointments per month. 
 
+![avg_unattended_GP_perc_barplot](https://github.com/Mattia-Bieler/Healthcare_Appointments_Project/assets/132078605/415362fa-7c88-4bb6-b540-6cd95da0b7fa)
+
+One thing that is clear is that the longer the waiting time, the higher the percentage of unattended GP appointments. This observation underscores the importance of investigating and addressing factors contributing to extended wait times, as it appears to be a significant determinant in the rate of missed GP appointments, thereby impacting the overall efficiency and cost-effectiveness of healthcare services.
+
 ## Appendix
 | Description | Python Code |
 | -------- | -------- |
