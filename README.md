@@ -25,7 +25,7 @@ Regarding attended appointments, between 90-93% of appointments were attended ea
 
 One thing that is clear is that the longer the waiting time, the higher the percentage of unattended GP appointments. This observation underscores the importance of investigating and addressing factors contributing to extended wait times, as it appears to be a significant determinant in the rate of missed GP appointments, thereby impacting the overall efficiency and cost-effectiveness of healthcare services.
 
-[__CLICK HERE TO WATCH PRESENTATION__](https://drive.google.com/file/d/1Nl3qNffAw5s65w8Ympi0bn4aiUOJf8DP/view?usp=sharing)
+[__CLICK HERE TO WATCH PRESENTATION__](https://drive.google.com/file/d/1D41i6ak81_ej1YqA8iErMMBCjQp-wvr3/view?usp=sharing)
 ![NHS Presentation](https://github.com/Mattia-Bieler/Healthcare_Appointments_Project/assets/132078605/a810f221-91d1-48aa-a5c6-5155efe2eac5)
 
 ## Appendix
