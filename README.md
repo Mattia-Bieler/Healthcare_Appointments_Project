@@ -1,4 +1,4 @@
-# Healthcare Appointments Project (SET UP NOT FINISHED)
+# Healthcare Appointments Project
 ## Project Background
 This project aims to explore and provide recommendations for future analysis to tackle the cost missed appointments with General Practitioners (GPs) have on the National Health Service (NHS). This business problem stems from a breakdown in communication between different departments and a neglect at looking at the data, resulting in decisions being made that are not data-driven. Therefore, while a solution for reducing or eliminating missed appointments is needed, the primary focus at this stage is on whether the NHS has adequate staff and capacity, as well as what the actual utilisation of resources was. Additionally, this report will quantify the number of missed appointments, focusing especially on missed GP appointments.
 
@@ -24,6 +24,9 @@ Regarding attended appointments, between 90-93% of appointments were attended ea
 ![avg_unattended_GP_perc_barplot](https://github.com/Mattia-Bieler/Healthcare_Appointments_Project/assets/132078605/415362fa-7c88-4bb6-b540-6cd95da0b7fa)
 
 One thing that is clear is that the longer the waiting time, the higher the percentage of unattended GP appointments. This observation underscores the importance of investigating and addressing factors contributing to extended wait times, as it appears to be a significant determinant in the rate of missed GP appointments, thereby impacting the overall efficiency and cost-effectiveness of healthcare services.
+
+[__CLICK HERE TO WATCH PRESENTATION__](https://drive.google.com/file/d/1Nl3qNffAw5s65w8Ympi0bn4aiUOJf8DP/view?usp=sharing)
+![NHS Presentation](https://github.com/Mattia-Bieler/Healthcare_Appointments_Project/assets/132078605/a810f221-91d1-48aa-a5c6-5155efe2eac5)
 
 ## Appendix
 | Description | Python Code |
