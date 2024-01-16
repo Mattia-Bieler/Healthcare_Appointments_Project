@@ -1,0 +1,285 @@
+LSE_DA201_Assignment
+
+file name: metadata_nhs.txt – metadata of the three CSV files combined
+                              The three CSV files are: actual_duration.csv,
+                                                       appointments_regioal.csv, 
+                                                       national_categories.csv. 
+
+
+Data quality:
+Data is collected from GP systems that are designed to be flexible and for practices 
+to use in everyday work and not for the purpose of data analysis. There are no national 
+standards for data entry about activity, and there is widespread variation in approach 
+to appointment management between practices. This means that there are variations in 
+data quality between practices.
+
+**************************************************************************************
+
+NOTE:
+The metadata is based on the original data set. For this assignment, the data set 
+(CSV files) were cleaned for you. For example, unnecessary columns were dropped to 
+decrease file size. 
+
+***************************************************************************************
+
+KEY INFORMATION:
+The raw data uses the term count to calculate, for example, the number of appointments.
+The word count refers to the number of values meeting a certain condition, while the 
+word sum indicates the total of a number of values. For example, if we have five cells 
+with different values (e.g. 20, 10, 5, 50, 25), the count of the cells will be five, 
+while the sum of the values will be 100.
+
+***************************************************************************************
+
+General information regarding data sets:
+
+1) Sub-ICB location level:
+
+1a) Daily counts, at Sub-ICB Location level:
+The CSV files include data for each calendar month during the 30-month reporting period. 
+The data is aggregated to daily counts, including breakdowns for Appointment Status, 
+Healthcare Professional, Mode of Appointment, and Time between Booking and Appointment. 
+The data is aggregated to Sub-ICB Location level, with NHS Geographies included. 
+There is also a coverage file included, providing the number of practices or patients
+included in the publication and the total number for the Sub-ICB Location for each
+month in the reporting period. These files can be used to look at appointments across 
+all regions for a particular day, week or month. For example, you can look at the daily
+count of telephone appointments with an appointment status of Attended by NHS
+commissioning region.
+
+1b) Regional counts, at Sub-ICB Location level:
+The CSV files include data for each ICB for the 30-month reporting period. The data 
+is aggregated to monthly counts, including breakdowns for Appointment Status, 
+Healthcare Professional, Mode of Appointment, and Time between Booking and Appointment. 
+The data is aggregated to Sub-ICB Location level, with NHS Geographies up to NHS 
+Commissioning Region included. These files can be used to look at appointments data 
+for a particular geography during the full reporting period. For example, you can 
+look at the monthly time series count of face-to-face appointments by Sub-ICB Location 
+for a chosen ICB.
+
+1c) Fields included:
+sub_icb_location_code
+sub_icb_location_name
+sub_icb_location_ons_code
+icb_ons_code
+region_ons_code
+appointment_month
+time_between_book_and_appointment
+count_of_appointments
+hcp_type
+appointment_mode
+appointment_status
+
+
+2) Appointment status (appointment_status):
+The appointment status shows whether the appointment is available, booked, has been 
+attended by the patient (or not), or has been cancelled. This status changes over 
+time, for example when a patient makes a booking, the appointment status changes 
+from ‘Available’ to ‘Booked’. This release reports the final status of each 
+appointment. 
+
+In most cases, at the time of the appointment a ‘Booked’ status will be changed to 
+either ‘Attended’ or ‘DNA’ (Did Not Attend). In some cases (3%–6% of monthly appointments), 
+the final status of an appointment remains as ‘Booked’. It is not known from the data 
+whether or not these appointments actually attended. For this reason, the status of these 
+appointments is reported as 'Unknown'.
+
+Due to an issue with the data collection, DNA appointments were not captured correctly 
+after June 2018 and are under-reported until and including November 2018 for all 
+practices using the TPP SystmOne system.
+
+
+3) Appointment mode (appointment_mode)
+The mode of the appointment shows the setting of the consultation. For example, face to face, 
+telephone, or home visits. This is set locally by the practices so it may not represent the actual 
+care setting of the appointment. For example, some video conference appointments may be logged 
+by the practice as face to face.
+
+Most face to face time is booked as individual appointment time, typically with one patient 
+attending each time slot. By contrast, many telephone triage and home visits appear as one 
+long blocked period and are not booked (e.g. traige and home visits) to individual patients.
+
+Some home visits and telephone triage sessions are booked in to early-morning sessions 
+(6 am to 6:20 am) for each GP as untimed appointments, but the consultations happen in the 
+afternoon. They are booked in to early-morning sessions so that they appear on the top of the 
+appointment book screen for each GP. At some practices, home visits are logged at reception 
+and not in the practice system.
+
+Unless home visits and telephone triage are logged as individual appointments and booked to 
+a patient, they will not appear in this publication. Appointments marked as online, video or 
+video conference are shown as 'Online / Video'. This may or may not include a video element. 
+Non-video based online consultations such as live chat or Voice over Internet Protocol (VoIP) 
+and video-based appointments are all included in this category.
+
+Practices using the Cegedim GP system are unable to supply appointment mode data. Consequently, 
+the proportion of appointments with an 'Unknown' appointment mode is higher in releases from 
+July 2019 onwards when Cegedim practices were included in the publication.
+
+
+4) Actual duration (actual_duration)
+Actual duration data was first included in the April 2022 release with data from 
+December 2021. Actual duration is the length in minutes of the consultation that
+took place.
+
+This field is recorded differently depending on the practice’s system supplier. 
+For example, EMIS records the actual duration as the time between the patient being 
+called into their appointment and the time the clinician records that the consultation 
+is complete. TPP can record the start time as either when the consultation is started, 
+when a clinician calls for a patient, or when the appointment status is changed to 
+‘in progress’. The end time is recorded as when the appointment is marked as finished 
+with the actual duration being the difference between these two times. This leads to 
+variations in data quality that NHS Digital is continuing to work with system suppliers 
+to address.
+
+Any appointments with a null duration or a duration of less than one minute or greater 
+than 60 minutes have been grouped into an ‘Unknown / Data Quality Issue’ category within 
+this publication.
+
+
+5) Context type (context_type)
+The National Categories are subdivided into three ‘Context Types’. The context describes 
+whether an appointment is an encounter relating to direct patient care, or an activity 
+undertaken as part of patient care where the patient is not involved. Where category data 
+is not received, an appointment is assigned to an ‘Unmapped’ context type.
+
+Context Type – Description
+Care Related Encounter – Categories within this context type involve the patient and can 
+                         be any modality, e.g. face-to-face appointments, telephone 
+                         consultations, video and online consultations, home visits etc.
+Inconsistent Mapping – Appointment types that have been mapped but not to a Care Related 
+                       Encounter are classed as Inconsistent Mapping. Appointments under 
+                       this context type conflict with the description of an appointment. Work 
+                       is ongoing to improve the consistency of mapping.
+Unmapped – No record of a category against an appointment slot type. This could be due to 
+           an error receiving the data, or an appointment type has not been mapped.
+
+
+6) National categories (national_category)
+Within each context type, there is an option for practices to choose a ‘Does Not Fit’ category. 
+This is used only when a practice is unable to place an appointment type within one of the 
+predefined categories. These appointments are assigned to the ‘Inconsistent Mapping’ context 
+type with further analysis planned to establish whether new categories in future releases are 
+needed, or additional assistance and guidance is required for mapping.
+
+Context Type – National Category
+Care Related Encounter – General Consultation Acute
+                       – General Consultation Routine
+                       – Planned Clinics
+                       – Planned Clinical Procedure
+                       – Unplanned Clinical Activity
+                       – Walk-in, Clinical Triage, Home Visit, 	Care Home Visit
+                       – Group Consultation and Group Education
+                       – Structured Medication Review
+                       – Patient contact during Care Home Round
+                       – Care Home Needs Assessment & Personalised Care and Support Planning
+                       – Social Prescribing Service
+                       – Service provided by organisation external to the practice
+                       – Non-contractual chargeable work
+Inconsistent Mapping – Care Related Encounter but does not fit into any other category
+                     – Appointment types not mapped to a Care Related Encounter
+
+
+7) Service setting (service_setting)
+The service setting describes the provision of care in which the appointment was delivered. 
+There are four service settings. Where category data is not received, an appointment is 
+assigned to an ‘Unmapped’ setting.
+
+Service Setting – Description
+General Practice – Appointments delivered by practice staff activity under the GMS/PMS/APMS 
+                   contract.
+Primary Care Network – Appointments delivered by staff employed or engaged under the Additional
+                       Roles Reimbursement Scheme (ARRS). Appointments delivered in fulfilment 
+                       of the service requirements of the Network Contract Directed Enhanced 
+                       Service (DES) – e.g. Structured Medication Reviews, weekly care home 
+                       rounds – with the exception of Extended Access services, for which the 
+                       Extended Access Provision service setting should be used.
+Extended Access Provision – Appointments commissioned as part of extended access contractual 
+                            arrangements.
+Other – Appointments delivered in the practice by another provider.
+Unmapped – No recorded category against an appointment slot type. This could be due to an error
+           receiving the data, or an appointment type has not been mapped.
+
+
+8) Time from booking to appointment (time_between_book_and_appointment)
+Time elapsed from when the booking was made to when the appointment happened is presented in 
+this release. There are several factors that drive this variable, including:
+* appointment availability at the practice
+* patient availability
+* urgency of the appointment
+* GP advice
+* regular/repeat appointments that may be booked in advance
+
+
+9) Healthcare professional type (hcp_type)
+Healthcare professional type (HCP type) was incorrectly extracted for some practices from 
+October 2017 onwards. This has led to potential incorrect reporting of some HCP Types, 
+including nurses. The only HCP type currently collected with high enough consistency for 
+publication is GP. Therefore, all other HCP types are reported as 'Other Practice Staff' 
+throughout this release.
+
+Blank or missing HCP types are due to the use of generic lists for GPs (for example visits and 
+prescription requests) or staff not set up correctly on the system (for example medical 
+students and team leaders).
+
+Where HCP type is included, it has been grouped in the following way.
+The occupations grouped as HCP type 'GP' are:
+* GP registrar
+* Locum GP
+* Principal GP
+
+The occupations grouped as HCP type 'Other Practice Staff' are:
+* Acupuncturist
+* Chiropodist
+* Community Psychiatric Nurse
+* Counsellor
+* Dispenser
+* District Nurse
+* Health Visitor
+* Interpreter/Link Worker
+* Osteopath
+* Other Practice Staff
+* Physiotherapist
+* Practice Nurse
+
+If HCP type is recorded as NULL/Missing Data, it will be classified as Unknown. It is possible 
+that a small proportion of GP appointments are classified within Other Practice Staff due to 
+incorrect mappings with data suppliers, for example, Trainee GP or GP Partner. For information 
+on how this differs from SDS Role Group go to the SDS Role Group section.
+
+
+10) Date of appointment (appointment_date)
+The date the appointment was made for by the patient.
+
+
+11) Month of appointment (appointment_month)
+The month in which the appointment is.
+
+
+12) Number of appointments (Ccount_of_appointments)
+Estimated number of total appointments
+Not all practices in England are included in this release (see Data Quality: Practice Coverage)
+meaning the total number of appointments is not known. An estimate of the total number of 
+appointments in England has been provided. The estimate is calculated by taking the number of 
+registered patients from missing practices and doing a simple calculation based on the number 
+of appointments per registered patient from the practices included in the data collection.
+
+An example of this calculation for November 2019 is shown below:
+Open, active practices in England – 6,837
+Number of practices included in the data collection – 6,538
+Percentage of practices included in the data collection – 95.6%
+Registered patients at open, active practices – 60,198,781
+Registered patients at practices included in the data collection – 58,042,831
+Percentage of patients included in the data collection – 96.4%
+Total number of appointments – 26,448,308
+Calculation = total number of 
+appointments divided by 
+percentage of patients included
+in the data collection          – 26,448,308 / 0.964
+Calculation result – 27,430,707.18
+Estimated England total count of appointments - 27,430,000
+
+This estimate does not include all GP activity or provide information about demand or capacity 
+of appointments in general practice.
+
+________________________________________________________________________________________________
+
