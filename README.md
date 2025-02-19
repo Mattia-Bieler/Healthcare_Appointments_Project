@@ -1,5 +1,4 @@
 # Healthcare Appointments Project
-![Image](https://github.com/user-attachments/assets/021f03c0-e899-41a4-8b4f-9c44c32e83dd)
 ## Project Background
 This project aims to explore and provide recommendations for future analysis to tackle the cost missed appointments with General Practitioners (GPs) have on the National Health Service (NHS). This business problem stems from a breakdown in communication between different departments and a neglect at looking at the data, resulting in decisions being made that are not data-driven. Therefore, while a solution for reducing or eliminating missed appointments is needed, the primary focus at this stage is on whether the NHS has adequate staff and capacity, as well as what the actual utilisation of resources was. Additionally, this report will quantify the number of missed appointments, focusing especially on missed GP appointments.
 
