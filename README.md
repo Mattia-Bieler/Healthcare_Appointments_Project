@@ -7,16 +7,16 @@ The project will provide a data-driven overview of current appointment trends in
 ## Analytical Approach
 ### Jupyter Notebook Preparation
 To enhance efficiency, several functions were implemented at the start of the Jupyter notebook to automate key tasks, minimise code repetition, and ensure consistency. These functions include:
-| **Function Name**                   | **Description** |
-|-------------------------------------|-----------------|
-| **`find_unique_values`**            | Identifies and prints unique values in a specified column. |
+| **Function Name**                   | **Description**                                                                                                                                             |
+|-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **`find_unique_values`**            | Identifies and prints unique values in a specified column.                                                                                                  |
 | **`process_date_column`**           | Converts a column to datetime format, finds the first and last dates, calculates the total number of days between them, and checks for invalid conversions. |
-| **`count_show_duplicates`**         | Identifies and counts duplicate rows, returning the first 20 duplicates if present. |
-| **`remove_duplicates`**             | Removes duplicate rows and returns the cleaned DataFrame. |
-| **`check_negative_value_count`**    | Checks for negative values in a specified column. |
-| **`calculate_total`**               | Calculates the sum of a specified numeric column. |
-| **`check_one_to_one_relationship`** | Verifies whether two columns have a one-to-one relationship by checking unique value mappings. |
-| **`check_column_values_match`**     | Ensures all values in a specified column of one DataFrame exist in another DataFrame and vice versa. |
+| **`count_show_duplicates`**         | Identifies and counts duplicate rows, returning the first 20 duplicates if present.                                                                         |
+| **`remove_duplicates`**             | Removes duplicate rows and returns the cleaned DataFrame.                                                                                                   |
+| **`check_negative_value_count`**    | Checks for negative values in a specified column.                                                                                                           |
+| **`calculate_total`**               | Calculates the sum of a specified numeric column.                                                                                                           |
+| **`check_one_to_one_relationship`** | Verifies whether two columns have a one-to-one relationship by checking unique value mappings.                                                              |
+| **`check_column_values_match`**     | Ensures all values in a specified column of one DataFrame exist in another DataFrame and vice versa.                                                        |
 
 
 ### Initial Analysis
@@ -31,14 +31,13 @@ For the ad DataFrame, region_ons_code values were replaced with corresponding re
 
 For the ar DataFrame, the find_unique_values function identified unnecessary spaces in time_between_book_and_appointment, which were removed. Values were then standardised for clarity: “More than 28 Days” was changed to “Over 28 Days”, and “Unknown / Data Quality” was replaced with “Unknown”. Furthermore, duplicates were identified. However, as the data comes from multiple systems across different sub-ICBs, the lack of a sub-ICB classification codes column, it is unclear whether they are actual duplicates or valid entries. Therefore, the potential duplicates were not removed. Finally, five key DataFrames were created from the ar DataFrame:
 
-| **DataFrame Name**               | **Description**                           | **Code**                                                                                 |
-|----------------------------------|-------------------------------------------|------------------------------------------------------------------------------------------|
-| **`attended_appointments`**      | Only attended appointments.      | `attended_appointments = ar[ar['appointment_status'] == 'Attended']`                              |
-| **`unattended_appointments`**    | Only unattended appointments.    | `dna_appointments = ar[ar['appointment_status'] == 'DNA']`                                        |
-| **`gp_appointments`**            | Only GP appointments.            | `gp_appointments = ar[ar['hcp_type'] == 'GP']`                                                    |
-| **`attended_gp_appointments`**   | Only attended GP appointments.   | `attended_gp_appointments = gp_appointments[gp_appointments['appointment_status'] == 'Attended']` |
-| **`unattended_gp_appointments`** | Only unattended GP appointments. | `dna_gp_appointments = gp_appointments[gp_appointments['appointment_status'] == 'DNA']`           |
-
+| **DataFrame Name**               | **Code**                                                                                          |
+|----------------------------------|---------------------------------------------------------------------------------------------------|
+| **`attended_appointments`**      | `attended_appointments = ar[ar['appointment_status'] == 'Attended']`                              |
+| **`unattended_appointments`**    | `dna_appointments = ar[ar['appointment_status'] == 'DNA']`                                        |
+| **`gp_appointments`**            | `gp_appointments = ar[ar['hcp_type'] == 'GP']`                                                    |
+| **`attended_gp_appointments`**   | `attended_gp_appointments = gp_appointments[gp_appointments['appointment_status'] == 'Attended']` |
+| **`unattended_gp_appointments`** | `dna_gp_appointments = gp_appointments[gp_appointments['appointment_status'] == 'DNA']`           |
 
 For the nc DataFrame, a temporary DataFrame (temp_nc) was created, containing only appointment_date and appointment_month. appointment_date values were reformatted to match the '%Y-%m' format of appointment_month. A match column was added to verify whether the two values were identical, and discrepancies were identified by counting rows with “False” in the match column. The results confirmed that all appointment_date values correctly matched appointment_month, ensuring data integrity before further analysis.
 
