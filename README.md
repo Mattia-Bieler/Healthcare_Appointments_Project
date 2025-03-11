@@ -42,4 +42,7 @@ The decision to use barplots and lineplots was driven by their simplicity and ea
 
 ## Insights and Recommendations
 __Service Capacity Utilisation__ <br>
+![ad monthly threshold](https://github.com/user-attachments/assets/665791ce-cc40-4411-936f-2a130e6c30d4)
+![ar monthly threshold](https://github.com/user-attachments/assets/46131477-e5c5-4d06-8e78-172f01246c48)
+![nc monthly threshold](https://github.com/user-attachments/assets/cc323fdc-510c-4598-8f44-7d4b5eedeb7d)
 To assess NHS service capacity utilisation, I analysed monthly and daily appointment trends across the ad, ar, and nc DataFrames. A monthly threshold was established by multiplying the daily threshold (1,200,000) by the number of days in each month. Across all three DataFrames, monthly appointments remained below this threshold. The highest monthly utilisation was recorded in March 2022 for the ad DataFrame (73.04%) and in November 2021 for both the ar and nc DataFrames (84.46%). Visualising monthly appointments on separate line plots showed that the nc DataFrame aligned with the ar DataFrame from August 2021 to June 2022. Merging both DataFrames and comparing total monthly appointments confirmed no discrepancies during this period. However, a further analysis should be done to confirm whether the nc DataFrame is a sub-set of the ar DataFrame.
