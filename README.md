@@ -33,11 +33,11 @@ For the ar DataFrame, the find_unique_values function identified unnecessary spa
 
 | **DataFrame Name**               | **Description**                           | **Code**                                                                                          |
 |----------------------------------|-------------------------------------------|---------------------------------------------------------------------------------------------------|
-| **`Attended Appointments`**      | Includes only attended appointments.      | `attended_appointments = ar[ar['appointment_status'] == 'Attended']`                              |
-| **`Unattended Appointments`**    | Includes only unattended appointments.    | `dna_appointments = ar[ar['appointment_status'] == 'DNA']`                                        |
-| **`GP Appointments`**            | Includes only GP appointments.            | `gp_appointments = ar[ar['hcp_type'] == 'GP']`                                                    |
-| **`Attended GP Appointments`**   | Includes only attended GP appointments.   | `attended_gp_appointments = gp_appointments[gp_appointments['appointment_status'] == 'Attended']` |
-| **`Unattended GP Appointments`** | Includes only unattended GP appointments. | `dna_gp_appointments = gp_appointments[gp_appointments['appointment_status'] == 'DNA']`           |
+| **`attended_appointments`**      | Includes only attended appointments.      | `attended_appointments = ar[ar['appointment_status'] == 'Attended']`                              |
+| **`unattended_appointments`**    | Includes only unattended appointments.    | `dna_appointments = ar[ar['appointment_status'] == 'DNA']`                                        |
+| **`gp_appointments`**            | Includes only GP appointments.            | `gp_appointments = ar[ar['hcp_type'] == 'GP']`                                                    |
+| **`attended_gp_appointments`**   | Includes only attended GP appointments.   | `attended_gp_appointments = gp_appointments[gp_appointments['appointment_status'] == 'Attended']` |
+| **`unattended_gp_appointments`** | Includes only unattended GP appointments. | `dna_gp_appointments = gp_appointments[gp_appointments['appointment_status'] == 'DNA']`           |
 
 
 For the nc DataFrame, a temporary DataFrame (temp_nc) was created, containing only appointment_date and appointment_month. appointment_date values were reformatted to match the '%Y-%m' format of appointment_month. A match column was added to verify whether the two values were identical, and discrepancies were identified by counting rows with “False” in the match column. The results confirmed that all appointment_date values correctly matched appointment_month, ensuring data integrity before further analysis.
