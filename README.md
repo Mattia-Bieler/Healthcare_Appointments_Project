@@ -6,6 +6,7 @@ The project will provide a data-driven overview of current appointment trends in
 
 ## Analytical Approach
 __Jupyter Notebook Preparation__
+
 To enhance efficiency, several functions were implemented at the start of the Jupyter notebook to automate key tasks, minimise code repetition, and ensure consistency. These functions include:
 •	find_unique_values: Identifies and prints unique values in a specified column.
 •	process_date_column: Converts a column to datetime format, finds the first and last dates, calculates the total number of days between them, and checks for invalid conversions.
@@ -17,6 +18,7 @@ To enhance efficiency, several functions were implemented at the start of the Ju
 •	check_column_values_match: Ensures all values in a specified column of one DataFrame exist in another DataFrame and vice versa.
 
 __Initial Analysis__
+
 After defining the key functions, I imported the datasets as separate DataFrames and applied the functions for cleaning and validation. Furthermore, I used the info function to summarise their structure, including non-null counts, data types, and memory usage. The DataFrames were named:
 •	ad (actual_duration.csv)
 •	ar (appointments_regional.csv)
