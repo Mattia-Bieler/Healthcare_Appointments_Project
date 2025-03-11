@@ -63,3 +63,7 @@ For GP appointments, 94.26% were attended, 2.48% unattended, and 3.26% unknown. 
 ![Unattended GP Cost](https://github.com/user-attachments/assets/d17ffe43-5771-452f-bae6-bc93af69f2e8)
 ![Unattended GP Percentage](https://github.com/user-attachments/assets/7f3a1942-5406-4569-98ed-86390ec12650)
 The monthly cost of unattended GP appointments exceeded £12 million in January, February, and March 2020, as well as October 2021, with February 2020 recording the highest percentage of unattended appointments (3.99%). Given that the World Health Organization (WHO) declared COVID-19 a Public Health Emergency of International Concern (PHEIC) on 30th January 2020, this spike in missed GP appointments is unsurprising due to uncertainty and worry about the virus.
+
+![Unattended GP Appointments Percentage Mode](https://github.com/user-attachments/assets/f05ad953-9be4-4948-834b-75bf6690954e)
+![Unknown GP Appointments Percentage Mode](https://github.com/user-attachments/assets/75d2b00a-26b6-41b9-a252-e92afc277cb3)
+Face-to-face GP appointments had the highest unattended rate (3.4%), while home visits had a lower rate (2.55%) but a significantly high proportion of unknown attendance (21.24%). This suggests a potential issue with recording home visit attendance, or a more serious concern regarding unfulfilled visits, requiring further investigation.
