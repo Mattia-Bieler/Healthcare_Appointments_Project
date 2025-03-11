@@ -1,1 +1,31 @@
-# Healthcare_Appointments_Project
+# Healthcare Appointments Project
+## Project Background
+This project focuses on analysing service capacity utilisation within the National Health Service (NHS) to identify patterns of overutilisation and assess the financial implications of missed General Practitioner (GP) appointments. By quantifying the costs of non-attendance and examining the contributing factors, the project aims to uncover key insights into the operational challenges faced by the NHS. The analysis is particularly important given the breakdown in coordination between regions and departments, which has led to a fragmented and incomplete view of service availability and appointment attendance.
+
+The project will provide a data-driven overview of current appointment trends in relation to service capacity utilisation, highlighting areas of inefficiency and financial strain. Based on these findings, actionable strategies will be proposed to optimise resource allocation, improve service delivery, and reduce financial losses from unattended GP appointments. The goal is to create an evidence-based framework that enhances operational decision-making and helps the NHS improve patient care while minimising costs.
+
+## Analytical Approach
+### Jupyter Notebook Preparation
+To enhance efficiency, several functions were implemented at the start of the Jupyter notebook to automate key tasks, minimise code repetition, and ensure consistency. These functions include:
+•	find_unique_values: Identifies and prints unique values in a specified column.
+•	process_date_column: Converts a column to datetime format, finds the first and last dates, calculates the total number of days between them, and checks for invalid conversions.
+•	count_show_duplicates: Identifies and counts duplicate rows, returning the first 20 duplicates if present.
+•	remove_duplicates: Removes duplicate rows and returns the cleaned DataFrame.
+•	check_negative_value_count: Checks for negative values in a specified column.
+•	calculate_total: Calculates the sum of a specified numeric column.
+•	check_one_to_one_relationship: Verifies whether two columns have a one-to-one relationship by checking unique value mappings.
+•	check_column_values_match: Ensures all values in a specified column of one DataFrame exist in another DataFrame and vice versa.
+
+### Initial Analysis
+After defining the key functions, I imported the datasets as separate DataFrames and applied the functions for cleaning and validation. Furthermore, I used the info function to summarise their structure, including non-null counts, data types, and memory usage. The DataFrames were named:
+•	ad (actual_duration.csv)
+•	ar (appointments_regional.csv)
+•	nc (national_categories.csv)
+
+For the ad DataFrame, region_ons_code values were replaced with corresponding region names, stored in a new column region_name, and the original column was removed to maintain a clean dataset. Then, the find_unique_values function was applied to verify unique values in region_name. Furthermore, an NHS colour palette was defined, mapping each region_name to an official colour code for visualisations. Finally, a region_metadata DataFrame was created, ensuring each sub_icb_location_code appeared only once by selecting relevant location columns.
+
+For the ar DataFrame, the find_unique_values function identified unnecessary spaces in time_between_book_and_appointment, which were removed. Values were then standardised for clarity: “More than 28 Days” was changed to “Over 28 Days”, and “Unknown / Data Quality” was replaced with “Unknown”. Furthermore, duplicates were identified. However, as the data comes from multiple systems across different sub-ICBs, the lack of a sub-ICB classification codes column, it is unclear whether they are actual duplicates or valid entries. Therefore, the potential duplicates were not removed.
+
+For the nc DataFrame, a temporary DataFrame (temp_nc) was created, containing only appointment_date and appointment_month. appointment_date values were reformatted to match the '%Y-%m' format of appointment_month. A match column was added to verify whether the two values were identical, and discrepancies were identified by counting rows with “False” in the match column. The results confirmed that all appointment_date values correctly matched appointment_month, ensuring data integrity before further analysis.
+
+After data cleaning and validation, I conducted an initial analysis, with the summarise_appointments function playing a key role. This function aggregates appointment counts by a specified category (e.g. appointment_status or time_between_book_and_appointment) and calculates each category's percentage share. It groups the data, sums count_of_appointments, and generates a sorted DataFrame, providing clear insights into appointment distributions. Another important function was the check_required_columns function. This function verifies whether a DataFrame contains a specified set of required columns by identifying which columns are present and which are missing, then printing the results. Using the check_required_columns function and the region_metadata DataFrame, I was able to add a region_name column to the nc DataFrame. After this initial analysis, I moved on to the main analysis to address the objectives of the project. For this, visualisations played a central role.
