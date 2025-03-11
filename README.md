@@ -7,16 +7,16 @@ The project will provide a data-driven overview of current appointment trends in
 ## Analytical Approach
 __Jupyter Notebook Preparation__ <br>
 To enhance efficiency, several functions were implemented at the start of the Jupyter notebook to automate key tasks, minimise code repetition, and ensure consistency. These functions include:
-| Function Name                  | Description |
-|--------------------------------|-------------|
-| `find_unique_values`           | Identifies and prints unique values in a specified column. |
-| `process_date_column`          | Converts a column to datetime format, finds the first and last dates, calculates the total number of days between them, and checks for invalid conversions. |
-| `count_show_duplicates`        | Identifies and counts duplicate rows, returning the first 20 duplicates if present. |
-| `remove_duplicates`            | Removes duplicate rows and returns the cleaned DataFrame. |
-| `check_negative_value_count`   | Checks for negative values in a specified column. |
-| `calculate_total`              | Calculates the sum of a specified numeric column. |
-| `check_one_to_one_relationship` | Verifies whether two columns have a one-to-one relationship by checking unique value mappings. |
-| `check_column_values_match`    | Ensures all values in a specified column of one DataFrame exist in another DataFrame and vice versa. |
+| **Function Name**                      | **Description** |
+|------------------------------------|-------------|
+| **`find_unique_values`**         | Identifies and prints unique values in a specified column. |
+| **`process_date_column`**        | Converts a column to datetime format, finds the first and last dates, calculates the total number of days between them, and checks for invalid conversions. |
+| **`count_show_duplicates`**      | Identifies and counts duplicate rows, returning the first 20 duplicates if present. |
+| **`remove_duplicates`**          | Removes duplicate rows and returns the cleaned DataFrame. |
+| **`check_negative_value_count`** | Checks for negative values in a specified column. |
+| **`calculate_total`**            | Calculates the sum of a specified numeric column. |
+| **`check_one_to_one_relationship`** | Verifies whether two columns have a one-to-one relationship by checking unique value mappings. |
+| **`check_column_values_match`**  | Ensures all values in a specified column of one DataFrame exist in another DataFrame and vice versa. |
 
 
 __Initial Analysis__ <br>
