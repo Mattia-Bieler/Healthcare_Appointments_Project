@@ -5,7 +5,7 @@ This project focuses on analysing service capacity utilisation within the Nation
 The project will provide a data-driven overview of current appointment trends in relation to service capacity utilisation, highlighting areas of inefficiency and financial strain. Based on these findings, actionable strategies will be proposed to optimise resource allocation, improve service delivery, and reduce financial losses from unattended GP appointments. The goal is to create an evidence-based framework that enhances operational decision-making and helps the NHS improve patient care while minimising costs.
 
 ## Analytical Approach
-#### Jupyter Notebook Preparation__
+### Jupyter Notebook Preparation
 To enhance efficiency, several functions were implemented at the start of the Jupyter notebook to automate key tasks, minimise code repetition, and ensure consistency. These functions include:
 | **Function Name**                   | **Description** |
 |-------------------------------------|-----------------|
@@ -19,7 +19,7 @@ To enhance efficiency, several functions were implemented at the start of the Ju
 | **`check_column_values_match`**     | Ensures all values in a specified column of one DataFrame exist in another DataFrame and vice versa. |
 
 
-__Initial Analysis__ <br>
+### Initial Analysis
 After defining the key functions, I imported the datasets as separate DataFrames and applied the functions for cleaning and validation. Furthermore, I used the info function to summarise their structure, including non-null counts, data types, and memory usage. The DataFrames were named:
 | **DataFrame Name** | **Source File**                  |
 |--------------------|----------------------------------|
@@ -41,7 +41,7 @@ At the beginning of the Jupyter notebook, custom configurations were set up to e
 The decision to use barplots and lineplots was driven by their simplicity and ease of interpretation. Both graph types are widely recognised and effective for comparing different categories. Additionally, lineplots offer the advantage of illustrating how these categories change over time, providing a clear view of trends and patterns. Furthermore, date tick labels were formatted as '%b %y' (e.g. Jan 20) for monthly appointment groupings to keep labels concise and avoid clutter, while '%d %b %y' (e.g. 01 Jan 20) was used for daily appointment plots to clearly illustrate the start of each month. To optimise the Jupyter notebook and reduce repetitive code, several functions were defined to generate the plots. 
 
 ## Insights and Recommendations
-#### Service Capacity Utilisation
+### Service Capacity Utilisation
 ![ad Monthly Threshold](https://github.com/user-attachments/assets/665791ce-cc40-4411-936f-2a130e6c30d4)
 ![ar Monthly Threshold](https://github.com/user-attachments/assets/46131477-e5c5-4d06-8e78-172f01246c48)
 ![nc Monthly Threshold](https://github.com/user-attachments/assets/cc323fdc-510c-4598-8f44-7d4b5eedeb7d)
