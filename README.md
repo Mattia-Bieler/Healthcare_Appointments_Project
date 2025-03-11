@@ -21,9 +21,11 @@ To enhance efficiency, several functions were implemented at the start of the Ju
 
 __Initial Analysis__ <br>
 After defining the key functions, I imported the datasets as separate DataFrames and applied the functions for cleaning and validation. Furthermore, I used the info function to summarise their structure, including non-null counts, data types, and memory usage. The DataFrames were named:
-•	ad (actual_duration.csv)
-•	ar (appointments_regional.csv)
-•	nc (national_categories.csv)
+| DataFrame Name | Source File                   |
+|---------------|------------------------------|
+| `ad`         | `actual_duration.csv`        |
+| `ar`         | `appointments_regional.csv`  |
+| `nc`         | `national_categories.csv`    |
 
 For the ad DataFrame, region_ons_code values were replaced with corresponding region names, stored in a new column region_name, and the original column was removed to maintain a clean dataset. Then, the find_unique_values function was applied to verify unique values in region_name. Furthermore, an NHS colour palette was defined, mapping each region_name to an official colour code for visualisations. Finally, a region_metadata DataFrame was created, ensuring each sub_icb_location_code appeared only once by selecting relevant location columns.
 
