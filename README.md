@@ -7,25 +7,25 @@ The project will provide a data-driven overview of current appointment trends in
 ## Analytical Approach
 __Jupyter Notebook Preparation__ <br>
 To enhance efficiency, several functions were implemented at the start of the Jupyter notebook to automate key tasks, minimise code repetition, and ensure consistency. These functions include:
-| **Function Name**                      | **Description** |
-|------------------------------------|-------------|
-| **`find_unique_values`**         | Identifies and prints unique values in a specified column. |
-| **`process_date_column`**        | Converts a column to datetime format, finds the first and last dates, calculates the total number of days between them, and checks for invalid conversions. |
-| **`count_show_duplicates`**      | Identifies and counts duplicate rows, returning the first 20 duplicates if present. |
-| **`remove_duplicates`**          | Removes duplicate rows and returns the cleaned DataFrame. |
-| **`check_negative_value_count`** | Checks for negative values in a specified column. |
-| **`calculate_total`**            | Calculates the sum of a specified numeric column. |
+| **Function Name**                   | **Description** |
+|-------------------------------------|-------------|
+| **`find_unique_values`**            | Identifies and prints unique values in a specified column. |
+| **`process_date_column`**           | Converts a column to datetime format, finds the first and last dates, calculates the total number of days between them, and checks for invalid conversions. |
+| **`count_show_duplicates`**         | Identifies and counts duplicate rows, returning the first 20 duplicates if present. |
+| **`remove_duplicates`**             | Removes duplicate rows and returns the cleaned DataFrame. |
+| **`check_negative_value_count`**    | Checks for negative values in a specified column. |
+| **`calculate_total`**               | Calculates the sum of a specified numeric column. |
 | **`check_one_to_one_relationship`** | Verifies whether two columns have a one-to-one relationship by checking unique value mappings. |
-| **`check_column_values_match`**  | Ensures all values in a specified column of one DataFrame exist in another DataFrame and vice versa. |
+| **`check_column_values_match`**     | Ensures all values in a specified column of one DataFrame exist in another DataFrame and vice versa. |
 
 
 __Initial Analysis__ <br>
 After defining the key functions, I imported the datasets as separate DataFrames and applied the functions for cleaning and validation. Furthermore, I used the info function to summarise their structure, including non-null counts, data types, and memory usage. The DataFrames were named:
-| **DataFrame Name** | **Source File**                   |
-|---------------|------------------------------|
-| **`ad`**         | `actual_duration.csv`        |
-| **`ar`**         | `appointments_regional.csv`  |
-| **`nc`**         | `national_categories.csv`    |
+| **DataFrame Name** | **Source File**                  |
+|--------------------|----------------------------------|
+| **`ad`**           | **`actual_duration.csv`**        |
+| **`ar`**           | **`appointments_regional.csv`**  |
+| **`nc`**           | **`national_categories.csv`**    |
 
 For the ad DataFrame, region_ons_code values were replaced with corresponding region names, stored in a new column region_name, and the original column was removed to maintain a clean dataset. Then, the find_unique_values function was applied to verify unique values in region_name. Furthermore, an NHS colour palette was defined, mapping each region_name to an official colour code for visualisations. Finally, a region_metadata DataFrame was created, ensuring each sub_icb_location_code appeared only once by selecting relevant location columns.
 
