@@ -31,13 +31,14 @@ For the ad DataFrame, region_ons_code values were replaced with corresponding re
 
 For the ar DataFrame, the find_unique_values function identified unnecessary spaces in time_between_book_and_appointment, which were removed. Values were then standardised for clarity: “More than 28 Days” was changed to “Over 28 Days”, and “Unknown / Data Quality” was replaced with “Unknown”. Furthermore, duplicates were identified. However, as the data comes from multiple systems across different sub-ICBs, the lack of a sub-ICB classification codes column, it is unclear whether they are actual duplicates or valid entries. Therefore, the potential duplicates were not removed. Finally, five key DataFrames were created from the ar DataFrame:
 
-| **DataFrame Name**               | **Description**                           |
-|----------------------------------|-------------------------------------------|
-| **`Attended Appointments`**      | Includes only attended appointments.      |
-| **`Unattended Appointments`**    | Includes only unattended appointments.    |
-| **`GP Appointments`**            | Includes only GP appointments.            |
-| **`Attended GP Appointments`**   | Includes only attended GP appointments.   |
-| **`Unattended GP Appointments`** | Includes only unattended GP appointments. |
+| **DataFrame Name**               | **Description**                           | **Code**                                                                                          |
+|----------------------------------|-------------------------------------------|---------------------------------------------------------------------------------------------------|
+| **`Attended Appointments`**      | Includes only attended appointments.      | `attended_appointments = ar[ar['appointment_status'] == 'Attended']`                              |
+| **`Unattended Appointments`**    | Includes only unattended appointments.    | `dna_appointments = ar[ar['appointment_status'] == 'DNA']`                                        |
+| **`GP Appointments`**            | Includes only GP appointments.            | `gp_appointments = ar[ar['hcp_type'] == 'GP']`                                                    |
+| **`Attended GP Appointments`**   | Includes only attended GP appointments.   | `attended_gp_appointments = gp_appointments[gp_appointments['appointment_status'] == 'Attended']` |
+| **`Unattended GP Appointments`** | Includes only unattended GP appointments. | `dna_gp_appointments = gp_appointments[gp_appointments['appointment_status'] == 'DNA']`           |
+
 
 For the nc DataFrame, a temporary DataFrame (temp_nc) was created, containing only appointment_date and appointment_month. appointment_date values were reformatted to match the '%Y-%m' format of appointment_month. A match column was added to verify whether the two values were identical, and discrepancies were identified by counting rows with “False” in the match column. The results confirmed that all appointment_date values correctly matched appointment_month, ensuring data integrity before further analysis.
 
