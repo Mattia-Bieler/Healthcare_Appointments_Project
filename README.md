@@ -8,7 +8,7 @@ The project will provide a data-driven overview of current appointment trends in
 __Jupyter Notebook Preparation__ <br>
 To enhance efficiency, several functions were implemented at the start of the Jupyter notebook to automate key tasks, minimise code repetition, and ensure consistency. These functions include:
 | **Function Name**                   | **Description** |
-|-------------------------------------|-------------|
+|-------------------------------------|-----------------|
 | **`find_unique_values`**            | Identifies and prints unique values in a specified column. |
 | **`process_date_column`**           | Converts a column to datetime format, finds the first and last dates, calculates the total number of days between them, and checks for invalid conversions. |
 | **`count_show_duplicates`**         | Identifies and counts duplicate rows, returning the first 20 duplicates if present. |
@@ -41,5 +41,5 @@ At the beginning of the Jupyter notebook, custom configurations were set up to e
 The decision to use barplots and lineplots was driven by their simplicity and ease of interpretation. Both graph types are widely recognised and effective for comparing different categories. Additionally, lineplots offer the advantage of illustrating how these categories change over time, providing a clear view of trends and patterns. Furthermore, date tick labels were formatted as '%b %y' (e.g. Jan 20) for monthly appointment groupings to keep labels concise and avoid clutter, while '%d %b %y' (e.g. 01 Jan 20) was used for daily appointment plots to clearly illustrate the start of each month. To optimise the Jupyter notebook and reduce repetitive code, several functions were defined to generate the plots. 
 
 ## Insights and Recommendations
-__Service Capacity Utilisation__ <b>
+__Service Capacity Utilisation__ <br>
 To assess NHS service capacity utilisation, I analysed monthly and daily appointment trends across the ad, ar, and nc DataFrames. A monthly threshold was established by multiplying the daily threshold (1,200,000) by the number of days in each month. Across all three DataFrames, monthly appointments remained below this threshold. The highest monthly utilisation was recorded in March 2022 for the ad DataFrame (73.04%) and in November 2021 for both the ar and nc DataFrames (84.46%). Visualising monthly appointments on separate line plots showed that the nc DataFrame aligned with the ar DataFrame from August 2021 to June 2022. Merging both DataFrames and comparing total monthly appointments confirmed no discrepancies during this period. However, a further analysis should be done to confirm whether the nc DataFrame is a sub-set of the ar DataFrame.
