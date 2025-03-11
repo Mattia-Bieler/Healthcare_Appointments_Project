@@ -67,3 +67,7 @@ The monthly cost of unattended GP appointments exceeded £12 million in January,
 ![Unattended GP Appointments Percentage Mode](https://github.com/user-attachments/assets/f05ad953-9be4-4948-834b-75bf6690954e)
 ![Unknown GP Appointments Percentage Mode](https://github.com/user-attachments/assets/75d2b00a-26b6-41b9-a252-e92afc277cb3)
 Face-to-face GP appointments had the highest unattended rate (3.4%), while home visits had a lower rate (2.55%) but a significantly high proportion of unknown attendance (21.24%). This suggests a potential issue with recording home visit attendance, or a more serious concern regarding unfulfilled visits, requiring further investigation.
+
+![Unattended GP Percentage Waiting Time](https://github.com/user-attachments/assets/475c7001-8cab-41e9-93e2-64bd82dbf8ef)
+![Unknown GP Percentage Waiting Time](https://github.com/user-attachments/assets/b6cdcbca-2780-4638-8426-3055f247d25f)
+A clear correlation exists between waiting times and attendance rates. As waiting times increase, so do unattended and unknown-status GP appointments, indicating that long waiting times contribute to incomplete records and higher non-attendance rates. Addressing this requires optimised scheduling, increased GP availability, and reminder systems, alongside further research into whether specific demographics are more prone to missing appointments. Analysing these factors could help develop targeted interventions to reduce unattended appointments and improve NHS service efficiency.
