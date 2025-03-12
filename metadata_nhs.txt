@@ -1,0 +1,57 @@
+File Name: metadata_nhs.txt – metadata of the three CSV files combined
+
+The three CSV files are: actual_duration.csv
+                         appointments_regioal.csv (currently the file is too large for GitHub) 
+                         national_categories.csv (currently the file is too large for GitHub)
+
+
+These are the columns within all three datasets, but not all three datasets have all of these columns.
+
+1. actual_duration  
+   The actual duration of the appointment in minutes.
+
+2. appointment_date  
+   The exact date when the appointment was scheduled.
+
+3. appointment_mode  
+   The mode or method of the appointment (e.g., face-to-face, telephone).
+
+4. appointment_month  
+   The calendar month during which the appointment took place.
+
+5. appointment_status  
+   The status of the appointment (e.g., Attended, DNA).
+
+6. count_of_appointments  
+   The total number of appointments counted.
+
+7. context_type  
+   The type of appointment context (e.g., Care Related Encounter, Inconsistent Mapping).
+
+8. hcp_type  
+   The type of healthcare professional involved in the appointment (e.g., GP, Other Practice staff).
+
+9. icb_ons_code  
+   The ONS code for the ICB (Integrated Care Board).
+
+10. national_category  
+   The specific national category of the appointment within the context (e.g., General Consultation Acute, Home Visit).
+
+11. region_ons_code  
+   The ONS code for the geographic region.
+
+12. service_setting  
+   The service setting for the appointment (e.g., General Practice, Primary Care Network).
+
+13. sub_icb_location_code  
+   A unique identifier for the Sub-ICB (Integrated Care Board) location.
+
+14. sub_icb_location_name  
+   The name of the Sub-ICB location.
+
+15. sub_icb_location_ons_code  
+   The ONS code associated with the Sub-ICB location.
+
+16. time_between_book_and_appointment  
+   The time interval between when the appointment was booked and when it occurred.
+
