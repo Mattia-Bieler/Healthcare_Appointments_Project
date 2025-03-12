@@ -84,7 +84,9 @@ A clear correlation exists between waiting times and attendance rates. As waitin
 
 ![Monthly GP Appointments Region](https://github.com/user-attachments/assets/bd77f650-c74d-4928-81d2-f9af3d7e3b8c)
 ![Attended GP Percentage Region](https://github.com/user-attachments/assets/5a32f54e-2d87-4447-acd7-d2cf6c561248)
-The analysis of GP appointments by region highlights strong patient engagement across all regions, revealing that over 93% of appointments were attended in each region. Overall, the Midlands had the highest number of appointments (73 million, 19.22%) and attended appointments (68.9 million, 19.26%), demonstrating its large healthcare demand. Looking at each region individually, the East of England had the highest attendance rate (95.28%), while London recorded the highest unattended rate (3.23%), with over 2.12 million missed appointments.
+The analysis of GP appointments by region shows consistent monthly trends in appointment volume fluctuations. Patient engagement remains high across all regions, with attendance rates exceeding 93% in each region.
+
+The Midlands recorded the highest number of total appointments (73 million, 19.22%) and attended appointments (68.9 million, 19.26%), reflecting its substantial healthcare demand. Furthermore, the East of England had the highest attendance rate (95.28%), while London reported the highest unattended rate (3.23%), with over 2.12 million missed appointments.
 
 ![Unttended GP Percentage Region](https://github.com/user-attachments/assets/cbc312eb-3c93-4525-b9a2-d4ef18fc3363)
 ![Unknown GP Percentage Region](https://github.com/user-attachments/assets/35f18830-ab24-4d16-aebd-bc27d44df5db)
