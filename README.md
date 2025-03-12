@@ -24,8 +24,8 @@ After defining the key functions, I imported the datasets as separate DataFrames
 | **DataFrame Name** | **Source File**                  |
 |--------------------|----------------------------------|
 | **`ad`**           | **`actual_duration.csv`**        |
-| **`ar`**           | **`appointments_regional.csv`**  |
-| **`nc`**           | **`national_categories.csv`**    |
+| **`ar`**           | **`appointments_regional.csv`** (currently the file is too large for GitHub) |
+| **`nc`**           | **`national_categories.csv`** (currently the file is too large for GitHub)   |
 
 For the ad DataFrame, region_ons_code values were replaced with corresponding region names, stored in a new column region_name, and the original column was removed to maintain a clean dataset. Then, the find_unique_values function was applied to verify unique values in region_name. Furthermore, an NHS colour palette was defined, mapping each region_name to an official colour code for visualisations. Finally, a region_metadata DataFrame was created, ensuring each sub_icb_location_code appeared only once by selecting relevant location columns.
 
