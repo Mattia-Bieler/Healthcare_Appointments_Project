@@ -64,10 +64,10 @@ A daily analysis provided deeper insights, revealing threshold exceedances despi
 While capacity is not exceeded monthly, days exceeding the threshold put a strain on NHS resources, likely affecting appointment efficiency. I would recommend incorporating date on appointment delays to deepen the analysis. Furthermore, the ad and nc DataFrames provide appointment dates without attendance details, while the ar DataFrame includes attendance only at a monthly level. To fully assess the impact of the days above the threshold on delays and unattended appointments, daily attendance data is needed. Additionally, a further analysis should explore scheduling adjustments, resource allocation, and potential operational bottlenecks to improve service delivery.
 
 ### Appointment Attendance
-![Monthly Appointments Status Percentage](https://github.com/user-attachments/assets/95d62285-016f-41d6-a726-f64b1ce100d6)
+![Monthly Appointments Status Percentage](https://github.com/user-attachments/assets/8881edd7-49f1-4a8f-a3a5-3150ee73a46c)
 Attendance rates in the ar DataFrame remained consistently high, never falling below 85%, with most months exceeding 90%. Overall, 91.24% of appointments were attended, while 4.16% were unattended, and 4.6% had an unknown status. The lowest attendance rate occurred in March 2020, likely due to the onset of the COVID-19 pandemic and initial uncertainty.
 
-![Monthly GP Appointments Status Percentage](https://github.com/user-attachments/assets/8394229f-e9a8-4bad-8b2c-d1549d12866f)
+![Monthly GP Appointments Status Percentage](https://github.com/user-attachments/assets/578c8e0d-9b3b-4de0-aad7-b11e7bbe36f4)
 For GP appointments, 94.26% were attended, 2.48% unattended, and 3.26% unknown. Therefore, the GP unattended rate is lower than the overall unattended rate. The high attendance rate for GP appointments highlights the NHS's financial burden from missed appointments cannot be due to widespread non-attendance. Instead, since GP appointments make up 51.11% of all bookings, even a small percentage of unattended GP appointments results in high costs. Additionally, GP appointments may be more expensive than those with other practice staff.
 
 ![Unattended GP Cost](https://github.com/user-attachments/assets/d17ffe43-5771-452f-bae6-bc93af69f2e8)
