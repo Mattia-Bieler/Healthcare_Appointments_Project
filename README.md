@@ -76,7 +76,7 @@ The monthly cost of unattended GP appointments exceeded £12 million in January,
 
 ![Unattended GP Appointments Percentage Mode](https://github.com/user-attachments/assets/f05ad953-9be4-4948-834b-75bf6690954e)
 ![Unknown GP Appointments Percentage Mode](https://github.com/user-attachments/assets/75d2b00a-26b6-41b9-a252-e92afc277cb3)
-Face-to-face GP appointments had the highest unattended rate (3.4%), while home visits had a lower rate (2.55%) but a significantly high proportion of unknown attendance (21.24%). This suggests a potential issue with recording home visit attendance, or a more serious concern regarding unfulfilled visits, requiring further investigation.
+Face-to-face GP appointments had the highest unattended rate (3.4%), while home visits had a lower rate (2.55%) but a significantly high proportion of unknown attendance (21.24%). This suggests a potential issue with recording home visit attendance or a more serious concern regarding unfulfilled visits, requiring further investigation. Additionally, telephone GP appointments had the highest attendance rate (96%), followed by video/online GP appointments (93.12%%). As these appointment types serve similar purposes, prioritising telephone appointments over video/online appointments should help improve overall attendance. However, there should also be a push to increase face-to-face appointments, as they not only improve overall GP appointment attendance rate but also provide a higher quality of care.
 
 ![Unattended GP Percentage Waiting Time](https://github.com/user-attachments/assets/475c7001-8cab-41e9-93e2-64bd82dbf8ef)
 ![Unknown GP Percentage Waiting Time](https://github.com/user-attachments/assets/b6cdcbca-2780-4638-8426-3055f247d25f)
