@@ -65,7 +65,6 @@ While capacity is not exceeded monthly, days exceeding the threshold put a strai
 ![Monthly Appointments Status Percentage](https://github.com/user-attachments/assets/406d5e18-1216-425a-aa95-88179bb11ccb)
 Attendance rates in the ar DataFrame remained consistently high, never falling below 85%, with most months exceeding 90%. Overall, 91.24% of appointments were attended, while 4.16% were unattended, and 4.6% had an unknown status. The lowest attendance rate occurred in March 2020, likely due to the onset of the COVID-19 pandemic and initial uncertainty.
 
-![Monthly Appointments Percentage HCP](https://github.com/user-attachments/assets/6f69a80a-9508-49bd-b336-4fdaa5952507)
 ![Monthly GP Appointments Status Percentage](https://github.com/user-attachments/assets/299096b3-c4d1-4117-8964-50e16c2d3bb2)
 For GP appointments, 94.26% were attended, 2.48% unattended, and 3.26% unknown. Therefore, the GP unattended rate is lower than the overall unattended rate. The high attendance rate for GP appointments highlights the NHS's financial burden from missed appointments cannot be due to widespread non-attendance. Instead, since GP appointments make up 51.11% of all bookings, even a small percentage of unattended GP appointments results in high costs. Additionally, GP appointments may be more expensive than those with other practice staff.
 
