@@ -29,15 +29,15 @@ After defining the key functions, I imported the datasets as separate DataFrames
 
 For the ad DataFrame, region_ons_code values were replaced with corresponding region names, stored in a new column region_name, and the original column was removed to maintain a clean dataset. Then, the find_unique_values function was applied to verify unique values in region_name. Furthermore, an NHS colour palette was defined, mapping each region_name to an official colour code for visualisations. Finally, a region_metadata DataFrame was created, ensuring each sub_icb_location_code appeared only once by selecting relevant location columns.
 
-For the ar DataFrame, the find_unique_values function identified unnecessary spaces in time_between_book_and_appointment, which were removed. Values were then standardised for clarity: “More than 28 Days” was changed to “Over 28 Days”, and “Unknown / Data Quality” was replaced with “Unknown”. Furthermore, duplicates were identified. However, as the data comes from multiple systems across different sub-ICBs, the lack of a sub-ICB classification codes column, it is unclear whether they are actual duplicates or valid entries. Therefore, the potential duplicates were not removed. Finally, five key DataFrames were created from the ar DataFrame:
+For the ar DataFrame, the find_unique_values function identified unnecessary spaces in time_between_book_and_appointment, which were removed. Values were then standardised for clarity: “More than 28 Days” was changed to “Over 28 Days”, and “Unknown / Data Quality” was replaced with “Unknown”. I also replaced "DNA" (Did Not Attend) with "Unattended" in appointment_status. Furthermore, duplicates were identified. However, as the data comes from multiple systems across different sub-ICBs, the lack of a sub-ICB classification codes column, it is unclear whether they are actual duplicates or valid entries. Therefore, the potential duplicates were not removed. Finally, five key DataFrames were created from the ar DataFrame:
 
 | **DataFrame Name**               | **Code**                                                                                        |
 |----------------------------------|-------------------------------------------------------------------------------------------------|
 | **`attended_appointments`**      | attended_appointments = ar[ar['appointment_status'] == 'Attended']                              |
-| **`unattended_appointments`**    | dna_appointments = ar[ar['appointment_status'] == 'DNA']                                        |
+| **`dna_appointments`**           | dna_appointments = ar[ar['appointment_status'] == 'Unattended']                                        |
 | **`gp_appointments`**            | gp_appointments = ar[ar['hcp_type'] == 'GP']                                                    |
 | **`attended_gp_appointments`**   | attended_gp_appointments = gp_appointments[gp_appointments['appointment_status'] == 'Attended'] |
-| **`unattended_gp_appointments`** | dna_gp_appointments = gp_appointments[gp_appointments['appointment_status'] == 'DNA']           |
+| **`dna_gp_appointments`**        | dna_gp_appointments = gp_appointments[gp_appointments['appointment_status'] == 'Unattended']    |
 
 For the nc DataFrame, a temporary DataFrame (temp_nc) was created, containing only appointment_date and appointment_month. appointment_date values were reformatted to match the '%Y-%m' format of appointment_month. A match column was added to verify whether the two values were identical, and discrepancies were identified by counting rows with “False” in the match column. The results confirmed that all appointment_date values correctly matched appointment_month, ensuring data integrity before further analysis.
 
@@ -64,10 +64,10 @@ A daily analysis provided deeper insights, revealing threshold exceedances despi
 While capacity is not exceeded monthly, days exceeding the threshold put a strain on NHS resources, likely affecting appointment efficiency. I would recommend incorporating date on appointment delays to deepen the analysis. Furthermore, the ad and nc DataFrames provide appointment dates without attendance details, while the ar DataFrame includes attendance only at a monthly level. To fully assess the impact of the days above the threshold on delays and unattended appointments, daily attendance data is needed. Additionally, a further analysis should explore scheduling adjustments, resource allocation, and potential operational bottlenecks to improve service delivery.
 
 ### Appointment Attendance
-![Monthly Appointments Status Percentage](https://github.com/user-attachments/assets/8881edd7-49f1-4a8f-a3a5-3150ee73a46c)
+![Monthly Appointments Status Percentage](https://github.com/user-attachments/assets/b7c0288d-68a9-4b64-b4ef-331543052665)
 Attendance rates in the ar DataFrame remained consistently high, never falling below 85%, with most months exceeding 90%. Overall, 91.24% of appointments were attended, while 4.16% were unattended, and 4.6% had an unknown status. The lowest attendance rate occurred in March 2020, likely due to the onset of the COVID-19 pandemic and initial uncertainty.
 
-![Monthly GP Appointments Status Percentage](https://github.com/user-attachments/assets/578c8e0d-9b3b-4de0-aad7-b11e7bbe36f4)
+![Monthly GP Appointments Status Percentage](https://github.com/user-attachments/assets/93dca9a7-9e68-4101-9444-271597d27350)
 For GP appointments, 94.26% were attended, 2.48% unattended, and 3.26% unknown. Therefore, the GP unattended rate is lower than the overall unattended rate. The high attendance rate for GP appointments highlights the NHS's financial burden from missed appointments cannot be due to widespread non-attendance. Instead, since GP appointments make up 51.11% of all bookings, even a small percentage of unattended GP appointments results in high costs. Additionally, GP appointments may be more expensive than those with other practice staff.
 
 ![Unattended GP Cost](https://github.com/user-attachments/assets/d17ffe43-5771-452f-bae6-bc93af69f2e8)
