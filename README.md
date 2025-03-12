@@ -80,7 +80,7 @@ Face-to-face GP appointments had the highest unattended rate (3.4%), while home 
 
 ![Unattended GP Percentage Waiting Time](https://github.com/user-attachments/assets/475c7001-8cab-41e9-93e2-64bd82dbf8ef)
 ![Unknown GP Percentage Waiting Time](https://github.com/user-attachments/assets/b6cdcbca-2780-4638-8426-3055f247d25f)
-A clear correlation exists between waiting times and attendance rates. As waiting times increase, so do unattended and unknown-status GP appointments, indicating that long waiting times contribute to higher non-attendance rates and incomplete records. Addressing this requires optimised scheduling, increased GP availability, and reminder systems, alongside further research into whether specific demographics are more prone to missing appointments. Analysing these factors could help develop targeted interventions to reduce unattended appointments and improve NHS service efficiency.
+A clear correlation exists between waiting times and attendance rates. As waiting times increase, so do unattended and unknown-status GP appointments, indicating that long waiting times contribute to higher non-attendance rates and incomplete records. Addressing this requires optimised scheduling, increased GP availability, and reminder systems, alongside further research into whether specific demographics are more prone to missing appointments. Analysing these factors could help develop targeted interventions to reduce unattended GP appointments and improve NHS service efficiency.
 
 ![Monthly GP Appointments Region](https://github.com/user-attachments/assets/bd77f650-c74d-4928-81d2-f9af3d7e3b8c)
 ![Attended GP Percentage Region](https://github.com/user-attachments/assets/5a32f54e-2d87-4447-acd7-d2cf6c561248)
